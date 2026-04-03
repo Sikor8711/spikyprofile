@@ -25,10 +25,10 @@ pub fn HomePage() -> impl IntoView {
                         "Spiky Profile <dev>"
                     </h1>
                     <p class="">
-                        "A personal blog and portfolio built with Leptos and Axum — fully server-side rendered, self-hosted on bare-metal infrastructure."
+                        "97th percentile comprehension. 4th percentile decoding. One brain."
                     </p>
                     <p>
-                        "Home of the Spiky Rust tutorial series: top-down, context-first Rust teaching for developers who already code."
+                        "My name is Patryk. I'm a self-taught developer in the middle of a career transition nobody designed a pipeline for. I write about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
                     </p>
                 </div>
             </div>
@@ -61,6 +61,7 @@ pub fn HomePage() -> impl IntoView {
                         "— honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
                     </li>
                 </ul>
+                <hr />
             </div>
             <div class="text-neutral-300 space-y-5">
                 <h2 class="text-2xl">"Tech Stack"</h2>
@@ -108,6 +109,7 @@ pub fn HomePage() -> impl IntoView {
                         </tbody>
                     </table>
                 </div>
+                <hr />
             </div>
         </section>
     }

@@ -39,7 +39,7 @@ spikyprofile.dev/
 │   └── posts/            # Blog post content & metadata
 ├── style/
 │   └── main.scss         # custom css
-│   └── main.css          # Tailwind entry point
+│   └── tailwind.css          # Tailwind entry point
 ├── assets/               # Static assets
 ├── Cargo.toml
 └── README.md

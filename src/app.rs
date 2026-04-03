@@ -1,5 +1,6 @@
 use crate::components::layout::MainLayout;
 use crate::pages::about::AboutPage;
+use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, MetaTags, Stylesheet, Title};
@@ -46,7 +47,11 @@ pub fn App() -> impl IntoView {
         <Router>
             <main>
                 <Routes fallback=|| "Page not found.".into_view()>
-                    <ParentRoute path=path!("") view=MainLayout>
+                    <ParentRoute path=path!("/") view=MainLayout>
+                        <ParentRoute path=path!("/blog") view=BlogPage>
+                            <Route path=path!("") view=BlogPage />
+                            <Route path=path!("about") view=AboutPage />
+                        </ParentRoute>
                         <Route path=path!("") view=HomePage />
                         <Route path=path!("about") view=AboutPage />
                         <Route path=path!("*any") view=NotFound />

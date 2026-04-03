@@ -1,8 +1,16 @@
 #![recursion_limit = "4096"]
 
 pub mod app;
-pub mod components;
-pub mod pages;
+pub mod components {
+    pub mod layout;
+    pub mod menu;
+    pub mod topbar;
+}
+pub mod pages {
+    pub mod about;
+    pub mod blog;
+    pub mod home;
+}
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

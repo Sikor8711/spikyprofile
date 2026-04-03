@@ -7,7 +7,7 @@ pub fn AboutPage() -> impl IntoView {
             <h1 class="text-3xl">"About me"</h1>
             <img
                 class="md:float-right max-h-80 md:px-5 mx-auto"
-                src="assets/images/patryk.webp"
+                src="/assets/images/patryk.webp"
                 alt="Patryk Photo"
             />
             <p>
@@ -69,8 +69,8 @@ pub fn AboutPage() -> impl IntoView {
 
             <img
                 class="md:float-right max-h-80 md:px-5 mx-auto"
-                src="assets/images/rust-logo-white-outline.svg"
-                alt="Results image"
+                src="/assets/images/rust-logo-white-outline.svg"
+                alt="Rust logo"
             />
             <p>" And for the first time in my life, I felt solid. "</p>
             <p>
@@ -89,7 +89,7 @@ pub fn AboutPage() -> impl IntoView {
 
             <img
                 class="md:float-right max-h-80 md:px-5 mx-auto"
-                src="assets/images/results.webp"
+                src="/assets/images/results.webp"
                 alt="Results image"
             />
             <p>" The results explained my entire life. "</p>
