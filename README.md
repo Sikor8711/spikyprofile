@@ -97,6 +97,17 @@ Deployments are fully automated. Pushing code to the `main` branch triggers a co
 - **Secure Delivery:** The GitHub Actions runner uses an **SSH tunnel** to securely bypass the NAT and reach the isolated webserver VM.
 - **Least Privilege Execution:** The automated worker does not have root access to the live system. It is strictly limited to uploading the compiled build artifacts into a temporary staging directory (`/tmp`).
 
+### The Deployment Hand-off
+
+Because the automated GitHub worker operates with intentionally restricted permissions, the final deployment phase is handled by a local bash script on the VM. This script acts as a secure bridge between the staging area and the live environment, ensuring a safe and atomic update.
+
+When triggered, the deployment script executes the following safeguard operations:
+
+1. **Validation & Backup:** Verifies the presence of the newly uploaded build in the staging directory (`/tmp`) and creates a timestamped backup of the current live production web root.
+2. **Safe Swap:** Temporarily halts the Leptos `systemd` service, uses `rsync` to cleanly swap the new compiled binary and assets into the live directory, and removes the temporary staging files.
+3. **Permission Hardening:** Enforces strict security by re-applying the correct ownership and execution permissions for the application user.
+4. **Service Restoration:** Restarts the Leptos daemon via `systemd` and immediately verifies its health status, ensuring the new build is running with minimal downtime.
+
 ### Process Management
 
 - **Staging to Production:** A custom bash script handles the final deployment phase, safely moving the untrusted payload from the `/tmp` directory into the live web root.
