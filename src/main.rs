@@ -1,3 +1,4 @@
+#![recursion_limit = "512"]
 #[cfg(feature = "ssr")]
 use axum::{routing::get, Router};
 #[cfg(feature = "ssr")]
