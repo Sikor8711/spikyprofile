@@ -61,7 +61,53 @@ pub fn HomePage() -> impl IntoView {
                         "— honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
                     </li>
                 </ul>
-
+            </div>
+            <div class="text-neutral-300 space-y-5">
+                <h2 class="text-2xl">"Tech Stack"</h2>
+                <div class="flex justify-center">
+                    <table clsss="mx-auto">
+                        <thead>
+                            <tr>
+                                <th>"Layer"</th>
+                                <th>Technology</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>"Frontend"</td>
+                                <td>"Leptos(SSR)"</td>
+                            </tr>
+                            <tr>
+                                <td>"Backend"</td>
+                                <td>"Axum"</td>
+                            </tr>
+                            <tr>
+                                <td>"Language"</td>
+                                <td>"Rust"</td>
+                            </tr>
+                            <tr>
+                                <td>"Styling"</td>
+                                <td>"TailwindCSS"</td>
+                            </tr>
+                            <tr>
+                                <td>"Hosting"</td>
+                                <td>"Bare-metal Proxmox"</td>
+                            </tr>
+                            <tr>
+                                <td>"Reverse Proxy"</td>
+                                <td>"Nginx"</td>
+                            </tr>
+                            <tr>
+                                <td>"CI/CD"</td>
+                                <td>"GitHub Action"</td>
+                            </tr>
+                            <tr>
+                                <td>"Analytics/CD"</td>
+                                <td>"Plausible (self-hosted)"</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     }

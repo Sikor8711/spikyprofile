@@ -2,12 +2,23 @@
 
 html {
   background-image: linear-gradient(to bottom right, #006d04, #000, #000, #000, #006d04);
+  min-height: 100vh;
 }
 
 body {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
+}
+
+tr,
+td,
+th,
+thead,
+tbody,
+table {
+  padding: 5px;
+  @apply border;
 }
 
 .spinning-element {
@@ -31,4 +42,31 @@ body {
   100% {
     transform: rotateY(360deg);
   }
+}
+
+.menuSlideIn3 {
+  transform: translateX(50px);
+  opacity: 0;
+}
+
+.menuSlideIn3.start {
+  animation: slidein3 0.3s ease-out forwards;
+}
+
+@keyframes slidein3 {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.menuSlidein2 {
+  width: 0px;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.menuSlidein2.start {
+  width: 100px;
+  opacity: 1;
 }
