@@ -1,91 +1,93 @@
-<picture>
-    <source srcset="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_Solid_White.svg" media="(prefers-color-scheme: dark)">
-    <img src="https://raw.githubusercontent.com/leptos-rs/leptos/main/docs/logos/Leptos_logo_RGB.svg" alt="Leptos Logo">
-</picture>
+# spikyprofile.dev
 
-# Leptos Axum Starter Template
+A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal infrastructure.
 
-This is a template for use with the [Leptos](https://github.com/leptos-rs/leptos) web framework and the [cargo-leptos](https://github.com/akesson/cargo-leptos) tool using [Axum](https://github.com/tokio-rs/axum).
+Home of the **Spiky Rust** tutorial series: top-down, context-first Rust teaching for developers who already code.
 
-## Creating your template repo
+## About
 
-If you don't have `cargo-leptos` installed you can install it with
+This site is the public face of my transition from knitting machine operator to software engineer. The name comes from my formal cognitive assessment, which revealed a striking "spiky profile" — outstanding silent reading comprehension alongside well-below-average decoding and working memory. That contrast shapes how I learn, how I teach, and how I build.
 
-```bash
-cargo install cargo-leptos --locked
+The blog covers:
+
+- **Spiky Rust** — a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples.
+- **Self-hosting & infrastructure** — Proxmox, Nginx, CI/CD, and the reality of running your own stack.
+- **Career transition** — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like.
+
+## Tech Stack
+
+| Layer         | Technology              |
+| ------------- | ----------------------- |
+| Frontend      | Leptos (SSR)            |
+| Backend       | Axum                    |
+| Language      | Rust                    |
+| Styling       | Tailwind CSS            |
+| Hosting       | Bare-metal Proxmox      |
+| Reverse Proxy | Nginx                   |
+| CI/CD         | GitHub Actions          |
+| Analytics     | Plausible (self-hosted) |
+
+## Project Structure
+
+```
+spikyprofile.dev/
+├── src/
+│   ├── app.rs            # Root Leptos app component & router
+│   ├── main.rs           # Axum server entrypoint
+│   ├── pages/            # Route components (home, about, blog)
+│   ├── components/       # Shared UI components
+│   └── posts/            # Blog post content & metadata
+├── style/
+│   └── main.css          # Tailwind entry point
+├── public/               # Static assets
+├── Cargo.toml
+└── README.md
 ```
 
-Then run
-```bash
-cargo leptos new --git https://github.com/leptos-rs/start-axum
-```
+## Getting Started
 
-to generate a new project template.
+### Prerequisites
 
-```bash
-cd sp
-```
+- [Rust](https://rustup.rs/) (stable)
+- [cargo-leptos](https://github.com/leptos-rs/cargo-leptos)
+- [Tailwind CSS CLI](https://tailwindcss.com/blog/standalone-cli)
 
-to go to your newly created project.
-Feel free to explore the project structure, but the best place to start with your application code is in `src/app.rs`.
-Additionally, Cargo.toml may need updating as new versions of the dependencies are released, especially if things are not working after a `cargo update`.
-
-## Running your project
+### Development
 
 ```bash
+# Clone the repo
+git clone https://github.com/Sikor8711/spikyprofile.dev.git
+cd spikyprofile.dev
+
+# Install cargo-leptos if you haven't already
+cargo install cargo-leptos
+
+# Run the dev server with hot reload
 cargo leptos watch
 ```
 
-## Installing Additional Tools
+The site will be available at `http://localhost:3000`.
 
-By default, `cargo-leptos` uses `nightly` Rust, `cargo-generate`, and `sass`. If you run into any trouble, you may need to install one or more of these tools.
+### Production Build
 
-1. `rustup toolchain install nightly --allow-downgrade` - make sure you have Rust nightly
-2. `rustup target add wasm32-unknown-unknown` - add the ability to compile Rust to WebAssembly
-3. `cargo install cargo-generate` - install `cargo-generate` binary (should be installed automatically in future)
-4. `npm install -g sass` - install `dart-sass` (should be optional in future
-5. Run `npm install` in end2end subdirectory before test
-
-## Compiling for Release
 ```bash
 cargo leptos build --release
 ```
 
-Will generate your server binary in target/release and your site package in target/site
+The compiled binary will be in `target/server/release/`.
 
-## Testing Your Project
-```bash
-cargo leptos end-to-end
-```
+## Deployment
 
-```bash
-cargo leptos end-to-end --release
-```
+The site runs on a self-hosted Proxmox server behind Nginx. Deployments are automated via GitHub Actions — push to `main` triggers a build and deploy cycle.
 
-Cargo-leptos uses Playwright as the end-to-end test tool.
-Tests are located in end2end/tests directory.
+## Author
 
-## Executing a Server on a Remote Machine Without the Toolchain
-After running a `cargo leptos build --release` the minimum files needed are:
+**Patryk Sikorski**
 
-1. The server binary located in `target/server/release`
-2. The `site` directory and all files within located in `target/site`
+- [spikyprofile.dev](https://spikyprofile.dev)
+- [GitHub](https://github.com/Sikor8711)
+- [LinkedIn](https://linkedin.com/in/patryk-sikorski-a4ab7610a)
 
-Copy these files to your remote server. The directory structure should be:
-```text
-sp
-site/
-```
-Set the following environment variables (updating for your project as needed):
-```sh
-export LEPTOS_OUTPUT_NAME="sp"
-export LEPTOS_SITE_ROOT="site"
-export LEPTOS_SITE_PKG_DIR="pkg"
-export LEPTOS_SITE_ADDR="127.0.0.1:3000"
-export LEPTOS_RELOAD_PORT="3001"
-```
-Finally, run the server binary.
+## License
 
-## Licensing
-
-This template itself is released under the Unlicense. You should replace the LICENSE for your own application with an appropriate license if you plan to release it publicly.
+This project is licensed under the MIT License. Blog content is © Patryk Sikorski — all rights reserved.
