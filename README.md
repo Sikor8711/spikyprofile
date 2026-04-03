@@ -1,37 +1,3 @@
-# spikyprofile.dev (work in progress)
-
-A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal infrastructure.
-
-Home of the **Spiky Rust** tutorial series: top-down, context-first Rust teaching for developers who already code.
-
-## About
-
-This site is the public face of my transition from knitting machine operator to software engineer. The name comes from my formal cognitive assessment, which revealed a striking "spiky profile" — outstanding silent reading comprehension alongside well-below-average decoding and working memory. That contrast shapes how I learn, how I teach, and how I build.
-
-The blog covers:
-
-- **Spiky Rust** — a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples.
-- **Self-hosting & infrastructure** — Proxmox, Nginx, CI/CD, and the reality of running your own stack.
-- **Career transition** — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like.
-
-## Tech Stack
-
-| Layer    | Technology         |
-| -------- | ------------------ |
-| Frontend | Leptos (SSR)       |
-| Backend  | Axum               |
-| Language | Rust               |
-| Styling  | Tailwind CSS       |
-| Hosting  | Bare-metal Proxmox |
-
-This is a fantastic README. The "About" section in particular is incredibly strong—it gives the project a clear identity, explains your specific approach to teaching Rust, and provides great context for recruiters or readers.
-
-Based on everything we just configured, the "Architecture & Deployment" section needs a rewrite to match the actual reality of your pipeline. The current draft mentions things like `rsync` and backups that your script doesn't actually do, and it glosses over the really impressive Proxy Jump and `sudoers` security setup you just built.
-
-Here is the updated README with an entirely accurate, professional description of your new deployment pipeline.
-
----
-
 # spikyprofile.dev
 
 A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal infrastructure.
