@@ -14,7 +14,7 @@ pub fn HamburgerMenu() -> impl IntoView {
     let menu_ref = NodeRef::<leptos::html::Div>::new();
 
     #[cfg(target_arch = "wasm32")]
-    on_click_outside(menu_ref, move |_| {
+    let _ = on_click_outside(menu_ref, move |_| {
         set_open.set(false);
     });
     view! {
