@@ -24,7 +24,6 @@ pub fn TopBar() -> impl IntoView {
                 <p class="pl-2 text-xl">
                     <b>"SPIKY"</b>
                     "profile.dev"
-
                 </p>
             </div>
             <div class="pr-2">
