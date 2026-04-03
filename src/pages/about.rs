@@ -3,8 +3,13 @@ use leptos::prelude::*;
 #[component]
 pub fn AboutPage() -> impl IntoView {
     view! {
-        <div class="space-y-5">
+        <div class="space-y-5 text-neutral-300">
             <h1 class="text-3xl">"About me"</h1>
+            <img
+                class="md:float-right max-h-80 md:px-5 mx-auto"
+                src="assets/images/patryk.webp"
+                alt="Patryk Photo"
+            />
             <p>
                 "I operate a knitting machine in a factory in England. Every morning I walk through a door that has nothing to do with who I am."
             </p>
@@ -61,6 +66,12 @@ pub fn AboutPage() -> impl IntoView {
                 " Through all of this — Rails, Express, Vue, SvelteKit, TypeScript — I could build things. I shipped projects. I solved problems. But there was always a voice in the back of my mind saying \"this will break and you won't know where. \" That voice wasn't paranoia. It was my brain telling me that these languages required a kind of cognitive bookkeeping that my working memory couldn't sustain. I didn't have the vocabulary for it then. I just felt unsure. Fragile. Like I was a fraud who hadn't been caught yet. "
             </p>
             <p>" Then I found Rust. "</p>
+
+            <img
+                class="md:float-right max-h-80 md:px-5 mx-auto"
+                src="assets/images/rust-logo-white-outline.svg"
+                alt="Results image"
+            />
             <p>" And for the first time in my life, I felt solid. "</p>
             <p>
                 " Rust doesn't trust you. Rust verifies. Every type is explicit. Every error must be handled. Every ownership transfer is visible in the code. The compiler doesn't let you write fragile software. It fights you. It argues with you. It says \"no \" a hundred times before it says \"okay, I believe you. \" And when it says okay, you know — actually know, not hope — that the code works. "
@@ -75,8 +86,13 @@ pub fn AboutPage() -> impl IntoView {
             <p>
                 " A few months ago, I had a cognitive assessment. A formal one. The kind where someone sits you down for hours and measures how your brain actually works. Not what you know — how you process. "
             </p>
+
+            <img
+                class="md:float-right max-h-80 md:px-5 mx-auto"
+                src="assets/images/results.webp"
+                alt="Results image"
+            />
             <p>" The results explained my entire life. "</p>
-            <img class="h-20" src="" alt="" />
             <p>" Silent reading comprehension: 129. 97th percentile. In my second language. "</p>
             <p>" Vocabulary: 111. Strong. Precise. "</p>
             <p>" Working memory: 77. Below average. "</p>

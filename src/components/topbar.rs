@@ -26,7 +26,7 @@ pub fn TopBar() -> impl IntoView {
                     "profile.dev"
                 </p>
             </div>
-            <div class="pr-2">
+            <div class="">
                 <HamburgerMenu />
             </div>
         </div>

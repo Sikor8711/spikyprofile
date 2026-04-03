@@ -6,7 +6,7 @@ use leptos_router::components::Outlet;
 pub fn MainLayout() -> impl IntoView {
     view! {
         <div class="text-green-500">
-            <header class="fixed top-0 right-0 w-screen z-200 bg-black/80">
+            <header class="fixed top-0 left-0 right-0 min-w-screen z-200 bg-black/80">
                 <TopBar />
             </header>
             <main class="m-2 pt-16">

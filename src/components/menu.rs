@@ -18,7 +18,7 @@ pub fn HamburgerMenu() -> impl IntoView {
         set_open.set(false);
     });
     view! {
-        <div class="absolute top-0 right-0 z-100">
+        <div class="absolute top-0 right-4 z-100">
             <div node_ref=menu_ref class="grid grid-cols-1 z-50 {}">
                 <div
                     class="relative flex flex-col pt-10 mt-2 gap-5 px-5 mx-5 mb-5 pb-5 bg-black/80 menuSlidein2"
