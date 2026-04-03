@@ -16,6 +16,7 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
             <head>
                 <meta charset="utf-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta name="author" content="Patryk Sikorski" />
                 <AutoReload options=options.clone() />
                 <HydrationScripts options />
                 <MetaTags />
@@ -39,7 +40,7 @@ pub fn App() -> impl IntoView {
         <Stylesheet id="leptos" href="/pkg/sp.css" />
 
         // sets the document title
-        <Title text="Welcome to Leptos" />
+        <Title text="Spiky Profile - Parsonal Blog" />
 
         // content for this welcome page
         <Router>

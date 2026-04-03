@@ -9,7 +9,7 @@ pub fn MainLayout() -> impl IntoView {
             <header class="sticky top-0 z-200">
                 <TopBar />
             </header>
-            <main class="">
+            <main class="m-2 ">
                 <Outlet />
             </main>
             <footer>
