@@ -38,8 +38,9 @@ spikyprofile.dev/
 │   ├── components/       # Shared UI components
 │   └── posts/            # Blog post content & metadata
 ├── style/
+│   └── main.scss          # custom css
 │   └── main.css          # Tailwind entry point
-├── public/               # Static assets
+├── assets/               # Static assets
 ├── Cargo.toml
 └── README.md
 ```
@@ -59,6 +60,9 @@ spikyprofile.dev/
 git clone https://github.com/Sikor8711/spikyprofile.dev.git
 cd spikyprofile.dev
 
+# Install tailwindcss
+npm install
+
 # Install cargo-leptos if you haven't already
 cargo install cargo-leptos
 
@@ -76,9 +80,27 @@ cargo leptos build --release
 
 The compiled binary will be in `target/server/release/`.
 
-## Deployment
+## 🚀 Architecture & Deployment
 
-The site runs on a self-hosted Proxmox server behind Nginx. Deployments are automated via GitHub Actions — push to `main` triggers a build and deploy cycle.
+The site is hosted on a private bare-metal server using a secure, automated CI/CD pipeline designed with least-privilege principles.
+
+### Infrastructure
+
+- **Host Environment:** Bare-metal Proxmox server operating on a 1Gbps symmetric fiber connection.
+- **Network Isolation:** The Proxmox host holds the single public IP. The application runs inside a sandboxed Virtual Machine (VM) on a completely private, local subnet.
+- **Ingress Routing:** Traffic is routed using an **Nginx stream block** (Layer 4 proxying) on the host node, transparently forwarding raw TCP/UDP packets directly to the internal VM without exposing the host itself.
+
+### CI/CD Pipeline (GitHub Actions)
+
+Deployments are fully automated. Pushing code to the `main` branch triggers a complete build and deploy cycle:
+
+- **Secure Delivery:** The GitHub Actions runner uses an **SSH tunnel** to securely bypass the NAT and reach the isolated webserver VM.
+- **Least Privilege Execution:** The automated worker does not have root access to the live system. It is strictly limited to uploading the compiled build artifacts into a temporary staging directory (`/tmp`).
+
+### Process Management
+
+- **Staging to Production:** A custom bash script handles the final deployment phase, safely moving the untrusted payload from the `/tmp` directory into the live web root.
+- **Daemonization:** The Rust/Leptos WASM binary is managed by a `systemd` service, which ensures the application stays alive, handles crash recovery, and performs seamless restarts when the bash script drops a fresh update.
 
 ## Author
 
