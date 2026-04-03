@@ -5,11 +5,11 @@ use leptos_router::components::Outlet;
 #[component]
 pub fn MainLayout() -> impl IntoView {
     view! {
-        <div class="">
-            <header class="sticky top-0 z-200">
+        <div class="text-green-500">
+            <header class="fixed top-0 right-0 w-screen z-200 bg-black/80">
                 <TopBar />
             </header>
-            <main class="m-2 ">
+            <main class="m-2 pt-16">
                 <Outlet />
             </main>
             <footer>

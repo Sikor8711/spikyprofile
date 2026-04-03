@@ -22,11 +22,12 @@ pub fn TopBar() -> impl IntoView {
                     </g>
                 </svg>
                 <p class="pl-2 text-xl">
-                    <b>SPIKY</b>
-                    profile
+                    <b>"SPIKY"</b>
+                    "profile.dev"
+
                 </p>
             </div>
-            <div>
+            <div class="pr-2">
                 <HamburgerMenu />
             </div>
         </div>
