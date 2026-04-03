@@ -1,4 +1,4 @@
-# spikyprofile.dev
+# spikyprofile.dev (work in progress)
 
 A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal infrastructure.
 
