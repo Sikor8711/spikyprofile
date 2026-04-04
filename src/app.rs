@@ -3,7 +3,7 @@ use crate::pages::about::AboutPage;
 use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
 use leptos::prelude::*;
-use leptos_meta::{provide_meta_context, MetaTags, Stylesheet, Title};
+use leptos_meta::{provide_meta_context, Meta, MetaTags, Stylesheet, Title};
 use leptos_router::{
     components::{ParentRoute, Route, Router, Routes},
     path,
@@ -39,6 +39,12 @@ pub fn App() -> impl IntoView {
     view! {
         // id=leptos means cargo-leptos will hot-reload this stylesheet
         <Stylesheet id="leptos" href="/pkg/sp.css" />
+
+        <Meta property="og:title" content="Spiky Profile - Persoanl Blog" />
+        <Meta
+            property="og:image"
+            content="https://spikyprofile.dev/assets/images/sp_logo_black.png"
+        />
 
         // sets the document title
         <Title text="Spiky Profile - Parsonal Blog" />
