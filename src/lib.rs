@@ -2,6 +2,7 @@
 
 pub mod app;
 pub mod components {
+    pub mod footer;
     pub mod layout;
     pub mod menu;
     pub mod topbar;

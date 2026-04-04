@@ -1,3 +1,4 @@
+use crate::components::footer::Footer;
 use crate::components::topbar::TopBar;
 use leptos::prelude::*;
 use leptos_router::components::Outlet;
@@ -9,11 +10,13 @@ pub fn MainLayout() -> impl IntoView {
             <header class="fixed top-0 left-0 right-0 min-w-screen z-200 bg-black/80">
                 <TopBar />
             </header>
-            <main class="m-2 pt-16">
+            <main class="m-2 pt-16 max-w-225 mx-auto">
                 <Outlet />
             </main>
-            <footer>
-                <p>"and this is footer"</p>
+            <footer class="bg-black/90 min-w-screen ml-0 z-100">
+                <div class="max-w-225 mx-auto">
+                    <Footer />
+                </div>
             </footer>
         </div>
     }

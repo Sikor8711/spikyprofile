@@ -6,7 +6,6 @@ html {
 }
 
 body {
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -69,4 +68,60 @@ table {
 .menuSlidein2.start {
   width: 100px;
   opacity: 1;
+}
+
+/* 1. The Parent Element */
+.shimmer-element {
+  position: relative;
+  /* Required so the absolute child stays inside */
+  overflow: hidden;
+  /* Hides the light when it's outside the element */
+
+  /* Basic styling just to make it look like a button */
+  border: none;
+  border-radius: 6px;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+/* 2. The Light Beam */
+.shimmer-element::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  /* Start off-screen to the left */
+  width: 50%;
+  /* The width of the flash */
+  height: 100%;
+
+  /* The actual flash: transparent -> white -> transparent */
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%);
+
+  /* Optional: Angle the light beam slightly */
+  transform: skewX(-30deg);
+
+  /* 3. The Animation */
+  animation: slide-flash 4s infinite;
+}
+
+/* 3. The Movement Rule */
+@keyframes slide-flash {
+  0% {
+    left: -100%;
+    /* Starts off left */
+  }
+
+  60% {
+    left: 200%;
+    /* Slides completely off to the right */
+  }
+
+  100% {
+    left: 200%;
+    /* Slides completely off to the right */
+  }
 }
