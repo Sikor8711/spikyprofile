@@ -30,6 +30,6 @@ pub fn TopBar() -> impl IntoView {
                 <HamburgerMenu />
             </div>
         </div>
-        <hr class="bg-green-800 h-0.5" />
+        <hr class="bg-green-800 h-0.5 shimmer-element" />
     }
 }
