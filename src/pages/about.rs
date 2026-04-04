@@ -3,7 +3,7 @@ use leptos::prelude::*;
 #[component]
 pub fn AboutPage() -> impl IntoView {
     view! {
-        <div class="space-y-5 text-neutral-300">
+        <div class="space-y-5 px-2 text-neutral-300">
             <h1 class="text-3xl">"About me"</h1>
             <img
                 class="md:float-right max-h-80 md:px-5 mx-auto"
