@@ -12,7 +12,7 @@ pub fn MainLayout() -> impl IntoView {
                 <TopBar />
                 <HamburgerMenu />
             </header>
-            <main class="m-2 pt-16 px-2 max-w-225 mx-auto">
+            <main class="m-2 pt-16 max-w-225 mx-auto">
                 <Outlet />
             </main>
             <footer class="bg-black/60 backdrop-blur-sm min-w-screen ml-0 z-100">

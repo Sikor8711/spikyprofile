@@ -21,7 +21,7 @@ pub fn HamburgerMenu() -> impl IntoView {
         <div class="absolute top-0 right-0">
             <div node_ref=menu_ref class="relative grid grid-cols-1">
                 <div
-                    class="flex flex-col rounded-bl menuSlidein2 backdrop-blur-sm bg-black/60"
+                    class="flex flex-col rounded-bl-lg menuSlidein2 backdrop-blur-sm bg-black/60"
                     class=("start", move || open.get())
                 >
                     {menu_links

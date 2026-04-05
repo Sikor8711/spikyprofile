@@ -4,6 +4,7 @@ use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, Meta, MetaTags, Stylesheet, Title};
+use leptos_router::components::Outlet;
 use leptos_router::{
     components::{ParentRoute, Route, Router, Routes},
     path,
@@ -54,9 +55,10 @@ pub fn App() -> impl IntoView {
             <main>
                 <Routes fallback=|| "Page not found.".into_view()>
                     <ParentRoute path=path!("/") view=MainLayout>
-                        <ParentRoute path=path!("/blog") view=BlogPage>
+                        <ParentRoute path=path!("/blog") view=move || view! { <Outlet /> }>
                             <Route path=path!("") view=BlogPage />
                             <Route path=path!("about") view=AboutPage />
+                            <Route path=path!("*any") view=NotFound />
                         </ParentRoute>
                         <Route path=path!("") view=HomePage />
                         <Route path=path!("about") view=AboutPage />
@@ -80,5 +82,13 @@ fn NotFound() -> impl IntoView {
             resp.set_status(axum::http::StatusCode::NOT_FOUND);
         }
     }
-    view! { <h1>"Not Found"</h1> }
+    view! {
+        <div class="grid justify-center text-neutral-300 text-center space-y-5">
+            <h1 class="text-3xl">"Page Not Found"</h1>
+            <p>"Sorry this page not exist"</p>
+            <a class="underline" href="/">
+                "go to home page"
+            </a>
+        </div>
+    }
 }
