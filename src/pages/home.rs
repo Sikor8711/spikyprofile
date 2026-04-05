@@ -26,10 +26,10 @@ pub fn HomePage() -> impl IntoView {
                     <h1 class="text-3xl text-center md:text-left font-bold text-shadow-[0_0_20px] ">
                         "Spiky Profile <dev>"
                     </h1>
-                    <p class="text-xl text-center">
+                    <p class="text-xl">
                         "97th percentile comprehension."<br /> "4th percentile decoding. One brain."
                     </p>
-                    <p class="text-center">
+                    <p>
                         "My name is Patryk. I'm a self-taught developer in the middle of a career transition nobody designed a pipeline for. I write about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
                     </p>
                 </div>
