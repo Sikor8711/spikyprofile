@@ -102,7 +102,7 @@ pub fn HomePage() -> impl IntoView {
                             <td>"GitHub Actions"</td>
                         </tr>
                         <tr>
-                            <td>"Analytics/CD"</td>
+                            <td>"Analytics"</td>
                             <td>"Plausible (self-hosted)"</td>
                         </tr>
                     </tbody>
