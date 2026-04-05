@@ -61,12 +61,19 @@ table {
 
 .menuSlidein2 {
   width: 0px;
+  height: 0px;
   opacity: 0;
-  transition: all 0.3s ease-out;
+  pointer-events: none;
+  transition: opacity .3s ease-out, width .3s ease-out, height .3s ease-out;
 }
 
 .menuSlidein2.start {
-  width: 100px;
+  margin-top: 3rem;
+  padding: 1rem;
+  width: auto;
+  min-width: 150px;
+  height: auto;
+  pointer-events: all;
   opacity: 1;
 }
 

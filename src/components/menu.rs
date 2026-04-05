@@ -18,10 +18,10 @@ pub fn HamburgerMenu() -> impl IntoView {
         set_open.set(false);
     });
     view! {
-        <div class="absolute top-0 right-4 z-100">
-            <div node_ref=menu_ref class="grid grid-cols-1 z-50 {}">
+        <div class="absolute top-0 right-0">
+            <div node_ref=menu_ref class="relative grid grid-cols-1">
                 <div
-                    class="relative flex flex-col pt-10 mt-2 gap-5 px-5 mx-5 mb-5 pb-5 bg-black/80 menuSlidein2"
+                    class="flex flex-col rounded-bl menuSlidein2 backdrop-blur-sm bg-black/60"
                     class=("start", move || open.get())
                 >
                     {menu_links
@@ -31,7 +31,7 @@ pub fn HamburgerMenu() -> impl IntoView {
                             view! {
                                 <a
                                     on:click=move |_| set_open.set(false)
-                                    class="menuSlideIn3"
+                                    class="menuSlideIn3 p-2"
                                     class=("start", move || open.get())
                                     href=n.0
                                     style=format!("animation-delay: {}ms", n.2)

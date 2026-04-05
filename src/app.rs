@@ -47,7 +47,7 @@ pub fn App() -> impl IntoView {
         />
 
         // sets the document title
-        <Title text="Spiky Profile - Personal Blog" />
+        <Title formatter=|text| format!("Spike Profile - {text}") />
 
         // content for this welcome page
         <Router>

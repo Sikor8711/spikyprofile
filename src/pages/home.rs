@@ -1,8 +1,10 @@
 use leptos::prelude::*;
+use leptos_meta::Title;
 
 #[component]
 pub fn HomePage() -> impl IntoView {
     view! {
+        <Title text="Home Page" />
         <section class="space-y-5">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-2 place-items-center">
                 <svg class="max-h-80 mx-auto" version="1.1" id="svg1" viewBox="0 0 1000 1000">

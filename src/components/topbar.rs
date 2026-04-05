@@ -1,10 +1,9 @@
-use crate::components::menu::HamburgerMenu;
 use leptos::prelude::*;
 
 #[component]
 pub fn TopBar() -> impl IntoView {
     view! {
-        <div class="flex h-8 m-2 justify-between items-center">
+        <div class="flex h-12 p-2 justify-between items-center bg-black/60 backdrop-blur-sm">
             <a href="/">
                 <div class="flex items-center">
                     <svg class="h-8" version="1.1" id="svg1" viewBox="0 0 1000 1000">
@@ -31,9 +30,6 @@ pub fn TopBar() -> impl IntoView {
                     </p>
                 </div>
             </a>
-            <div>
-                <HamburgerMenu />
-            </div>
         </div>
         <hr class="bg-green-800 h-0.5 shimmer-element" />
     }
