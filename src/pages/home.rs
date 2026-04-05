@@ -64,8 +64,6 @@ pub fn HomePage() -> impl IntoView {
                     </li>
                 </ul>
                 <hr />
-            </div>
-            <div class="text-neutral-300 space-y-5">
                 <h2 class="text-2xl">"Tech Stack"</h2>
                 <table class="mx-auto">
                     <thead>
@@ -101,7 +99,7 @@ pub fn HomePage() -> impl IntoView {
                         </tr>
                         <tr>
                             <td>"CI/CD"</td>
-                            <td>"GitHub Action"</td>
+                            <td>"GitHub Actions"</td>
                         </tr>
                         <tr>
                             <td>"Analytics/CD"</td>
