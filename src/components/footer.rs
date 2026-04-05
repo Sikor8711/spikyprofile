@@ -8,7 +8,11 @@ pub fn Footer() -> impl IntoView {
             <h3 class="p-1 rounded text-xl shimmer-element">"SpikyProfile.dev"</h3>
         </div>
         <div class="flex justify-center gap-8 items-center py-5">
-            <a href="https://github.com/Sikor8711" target="_blank">
+            <a
+                href="https://github.com/Sikor8711"
+                target="_blank"
+                aria-label="link to Github profile"
+            >
                 <svg
                     class="size-8 spinning-element"
                     xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +24,11 @@ pub fn Footer() -> impl IntoView {
                     />
                 </svg>
             </a>
-            <a href="https://www.linkedin.com/in/patryk-sikorski-a4ab7610a/" target="_blank">
+            <a
+                href="https://www.linkedin.com/in/patryk-sikorski-a4ab7610a/"
+                target="_blank"
+                aria-label="link to linkedin profile"
+            >
                 <svg
                     class="size-8 spinning-element"
                     xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +40,11 @@ pub fn Footer() -> impl IntoView {
                     />
                 </svg>
             </a>
-            <a href="https://www.instagram.com/sikor44k/" target="_blank">
+            <a
+                href="https://www.instagram.com/sikor44k/"
+                target="_blank"
+                aria-label="link to instagram profile"
+            >
                 <svg
                     class="size-8 spinning-element"
                     xmlns="http://www.w3.org/2000/svg"
@@ -44,7 +56,7 @@ pub fn Footer() -> impl IntoView {
                     />
                 </svg>
             </a>
-            <a href="mailto:patryk@spikyprofile.dev" target="_blank">
+            <a href="mailto:patryk@spikyprofile.dev" target="_blank" aria-label="Email address">
                 <svg
                     class="size-8 spinning-element"
                     xmlns="http://www.w3.org/2000/svg"

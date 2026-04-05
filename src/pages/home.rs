@@ -110,7 +110,7 @@ pub fn HomePage() -> impl IntoView {
                 <hr />
                 <p>
                     "If you want to find out more about me, I invite you to read the "
-                    <a class="underline" href="/about">
+                    <a class="underline" href="/about" aria-label="Link to about me page">
                         "about me"
                     </a>" page — warning, it's quite long."
                 </p>

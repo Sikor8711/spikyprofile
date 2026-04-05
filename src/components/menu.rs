@@ -49,6 +49,7 @@ pub fn HamburgerMenu() -> impl IntoView {
                             if open.get() { "justify-self-start" } else { "justify-self-end" },
                         )
                     }
+                    aria-label="Menu"
                     on:click=toggle
                 >
                     <div class="grid justify-items-center gap-1.5">
