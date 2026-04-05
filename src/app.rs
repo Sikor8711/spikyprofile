@@ -36,7 +36,7 @@ pub fn App() -> impl IntoView {
     provide_meta_context();
     view! {
         // id=leptos means cargo-leptos will hot-reload this stylesheet
-        <Title formatter=|text| format!("Spike Profile - {text}") />
+        <Title formatter=|text| format!("Spiky Profile - {text}") />
         <Meta
             name="description"
             content="A self-taught developer's transition from knitting machine operator to software engineer. Writing about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
