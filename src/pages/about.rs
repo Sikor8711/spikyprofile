@@ -31,7 +31,7 @@ pub fn AboutPage() -> impl IntoView {
                 " In 2011, I left Poland. I was young. I barely spoke English. I didn't have a plan. I had a feeling — that what was behind me wasn't enough, and that whatever was ahead of me, even if I couldn't name it, was worth walking toward. "
             </p>
             <p>
-                " I landed in the UK and I started from nothing. Not \"startingover \" the way people say it casually. Actually nothing. No career. No language fluency. No network. No qualifications that meant anything here. Just time and the willingness to use it. But that wasn't new. I'd been starting from nothing since I was seventeen. "
+                " I landed in the UK and I started from nothing. Not \"starting over\" the way people say it casually. Actually nothing. No career. No language fluency. No network. No qualifications that meant anything here. Just time and the willingness to use it. But that wasn't new. I'd been starting from nothing since I was seventeen. "
             </p>
             <p>
                 " I met Luiza. And she changed everything. Not in the dramatic, cinematic way people talk about love changing things. In the real way. She believed in things. She believed in building things. Together we opened a plant-based café in Leicester called Healthy Louisa. "
