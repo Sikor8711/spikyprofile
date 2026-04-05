@@ -68,7 +68,7 @@ pub fn Footer() -> impl IntoView {
                     />
                 </svg>
             </a>
-            <a href="/">
+            <a href="/" aria-label="Home page link">
                 <svg class="size-10" version="1.1" id="svg1" viewBox="0 0 1000 1000">
                     <g id="g3" transform="matrix(1.5725068,0,0,1.5725068,-152.05252,-263.98656)">
                         <path
