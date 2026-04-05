@@ -39,7 +39,7 @@ pub fn HomePage() -> impl IntoView {
                     "This site is the public face of my transition from knitting machine operator to software engineer."
                 </p>
                 <p>
-                    "The name comes from my formal cognitive assessment, which revealed a striking \"spiky profile \" — outstanding silent reading comprehension alongside well-below-average decoding and working memory."
+                    "The name comes from my formal cognitive assessment, which revealed a striking \"spiky profile\" — outstanding silent reading comprehension alongside well-below-average decoding and working memory."
                 </p>
                 <p>
                     "That contrast shapes how I "<b>"learn"</b>", how I "<b>"teach"</b>
@@ -49,16 +49,16 @@ pub fn HomePage() -> impl IntoView {
                 <h2 class="text-2xl">The blog covers:</h2>
                 <ul class="space-y-5 list-disc list-inside">
                     <li>
-                        <b>"Spiky Rust "</b>
-                        "— a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples."
+                        <b>"Spiky Rust"</b>
+                        " — a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples."
                     </li>
                     <li>
-                        <b>"Self-hosting & infrastructure "</b>
-                        "— Proxmox, Nginx, CI/CD, and the reality of running your own stack."
+                        <b>"Self-hosting & infrastructure"</b>
+                        " — Proxmox, Nginx, CI/CD, and the reality of running your own stack."
                     </li>
                     <li>
-                        <b>"Career transition "</b>
-                        "— honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
+                        <b>"Career transition"</b>
+                        " — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
                     </li>
                 </ul>
                 <hr />
