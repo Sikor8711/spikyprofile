@@ -4,7 +4,7 @@ use leptos_meta::Title;
 #[component]
 pub fn HomePage() -> impl IntoView {
     view! {
-        <Title text="Home Page" />
+        <Title text="Rust, Self-Hosting & Career Transition" />
         <section class="space-y-5">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-2 place-items-center">
                 <svg class="max-h-80 mx-auto" version="1.1" id="svg1" viewBox="0 0 1000 1000">
@@ -26,10 +26,10 @@ pub fn HomePage() -> impl IntoView {
                     <h1 class="text-3xl text-center md:text-left font-bold text-shadow-[0_0_20px] ">
                         "Spiky Profile <dev>"
                     </h1>
-                    <p class="">
-                        "97th percentile comprehension. 4th percentile decoding. One brain."
+                    <p class="text-xl text-center">
+                        "97th percentile comprehension."<br /> "4th percentile decoding. One brain."
                     </p>
-                    <p>
+                    <p class="text-center">
                         "My name is Patryk. I'm a self-taught developer in the middle of a career transition nobody designed a pipeline for. I write about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
                     </p>
                 </div>
@@ -112,6 +112,12 @@ pub fn HomePage() -> impl IntoView {
                     </table>
                 </div>
                 <hr />
+                <p>
+                    "If you want to find out more about me, I invite you to read the "
+                    <a class="underline" href="/about">
+                        "about me"
+                    </a>" page — warning, it's quite long."
+                </p>
             </div>
         </section>
     }
