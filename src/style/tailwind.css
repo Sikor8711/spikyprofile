@@ -22,6 +22,14 @@ li {
   padding-right: 1.5rem;
 }
 
+.alink {
+  color: greenyellow;
+  text-decoration: underline;
+}
+
+.alink:visited {
+  color: darkseagreen;
+}
 
 code {
   background-color: black;

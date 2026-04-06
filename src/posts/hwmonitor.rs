@@ -27,7 +27,7 @@ pub fn HwmonitorPartOnePost() -> impl IntoView {
                 <ul class="list-disc list-inside">
                     <li>
                         <b>"Sender "</b>
-                        "- runs on each machine you want to monitor. Collects hardware data (CPU, RAM, temps, disk) and exposes it when asked."
+                        "— runs on each machine you want to monitor. Collects hardware data (CPU, RAM, temps, disk) and exposes it when asked."
                     </li>
                     <li>
                         <b>"Receiver "</b>
@@ -39,10 +39,8 @@ pub fn HwmonitorPartOnePost() -> impl IntoView {
                     </li>
                 </ul>
                 <p>
-                    "
-                    Every instance also gets a "<b>"TUI powered by Ratatui"</b>
-                    " — a terminal interface that lets you see what's happening on that node in real time. Whether it's a sender showing its local hardware stats or a receiver showing aggregated data from all senders, you get a live view right in your terminal. No browser needed to check on things. SSH in, see the state, get out.
-                    "
+                    "Every instance also gets a "<b>"TUI powered by Ratatui"</b>
+                    " — a terminal interface that lets you see what's happening on that node in real time. Whether it's a sender showing its local hardware stats or a receiver showing aggregated data from all senders, you get a live view right in your terminal. No browser needed to check on things. SSH in, see the state, get out."
                 </p>
                 <p>
                     "One binary. You configure it as a sender, a receiver, or both. That's the first design decision and it matters — no juggling different packages or versions across machines."
@@ -107,23 +105,33 @@ pub fn HwmonitorPartOnePost() -> impl IntoView {
                 <h2 class="text-xl font-bold">"The Stack"</h2>
                 <ul class="list-disc list-inside">
                     <li>
-                        <b>"Axum "</b>
+                        <a class="alink" href="https://docs.rs/axum/latest/axum/">
+                            <b>"Axum "</b>
+                        </a>
                         " — HTTP server and WebSocket handling"
                     </li>
                     <li>
-                        <b>"Sysinfo "</b>
+                        <a class="alink" href="https://docs.rs/sysinfo/latest/sysinfo/">
+                            <b>"Sysinfo "</b>
+                        </a>
                         " — cross-platform hardware data collection"
                     </li>
                     <li>
-                        <b>"Ratatui "</b>
+                        <a class="alink" href="https://ratatui.rs/">
+                            <b>"Ratatui "</b>
+                        </a>
                         " — terminal user interface"
                     </li>
                     <li>
-                        <b>" Tokio"</b>
+                        <a class="alink" href="https://tokio.rs/">
+                            <b>"Tokio"</b>
+                        </a>
                         " — async runtime tying it all together"
                     </li>
                     <li>
-                        <b>"Leptos "</b>
+                        <a class="alink" href="https://leptos.dev/">
+                            <b>"Leptos "</b>
+                        </a>
                         " — the web frontend that consumes the data (on spikyprofile.dev)"
                     </li>
                 </ul>
