@@ -12,6 +12,9 @@ pub mod pages {
     pub mod blog;
     pub mod home;
 }
+pub mod posts {
+    pub mod hwmonitor;
+}
 
 #[cfg(feature = "hydrate")]
 #[wasm_bindgen::prelude::wasm_bindgen]

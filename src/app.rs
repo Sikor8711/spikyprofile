@@ -2,6 +2,7 @@ use crate::components::layout::MainLayout;
 use crate::pages::about::AboutPage;
 use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
+use crate::posts::hwmonitor::HwmonitorPartOnePost;
 use leptos::prelude::*;
 use leptos_meta::{provide_meta_context, Meta, MetaTags, Stylesheet, Title};
 use leptos_router::components::Outlet;
@@ -74,6 +75,10 @@ pub fn App() -> impl IntoView {
                     <ParentRoute path=path!("/") view=MainLayout>
                         <ParentRoute path=path!("/blog") view=move || view! { <Outlet /> }>
                             <Route path=path!("") view=BlogPage />
+                            <Route
+                                path=path!("/post/hardware-monitor-part-1-concept")
+                                view=HwmonitorPartOnePost
+                            />
                             <Route path=path!("about") view=AboutPage />
                             <Route path=path!("*any") view=NotFound />
                         </ParentRoute>

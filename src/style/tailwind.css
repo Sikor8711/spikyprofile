@@ -22,6 +22,16 @@ li {
   padding-right: 1.5rem;
 }
 
+
+code {
+  background-color: black;
+  color: greenyellow;
+  border-radius: 5px;
+  padding: 1px;
+  border: 1px;
+  border-color: white;
+}
+
 tr,
 td,
 th,
