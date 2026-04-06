@@ -1,9 +1,10 @@
 use leptos::prelude::*;
-use leptos_meta::Title;
+use leptos_meta::{Meta, Title};
 
 #[component]
 pub fn HwmonitorPartOnePost() -> impl IntoView {
     view! {
+        <Meta property="og:title" content="Hardware Monitor Part 1 — Concept" />
         <Title text="Hardware Monitor Part 1 — Concept" />
         <div class="text-neutral-300 space-y-5">
             <h1 class="text-2xl md:text-3xl text-center">"Hardware Monitor Part 1 — Concept"</h1>
