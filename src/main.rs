@@ -38,6 +38,16 @@ async fn main() {
         }
         }),
         )
+        .route("/sitemap.xml",get({let site_root= site_root.clone(); move || async move {
+            use axum::response::IntoResponse;
+            let path = format!("{site_root}/sitemap.xml");
+            match tokio::fs::read(&path).await {
+                Ok(bytes)=> ([(axum::http::header::CONTENT_TYPE, "application/xml")], bytes).into_response(),
+                Err(_) => axum::http::StatusCode::NOT_FOUND.into_response(),
+            }
+        }
+        }),
+        )
         .leptos_routes(&leptos_options, routes, {
             let leptos_options = leptos_options.clone();
             move || shell(leptos_options.clone())
