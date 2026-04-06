@@ -1,10 +1,10 @@
 use leptos::prelude::*;
-
 use leptos_meta::Title;
+
 #[component]
 pub fn AboutPage() -> impl IntoView {
     view! {
-        <Title text="Spiky Profile - About me" />
+        <Title text="About me" />
         <div class="space-y-5 text-neutral-300">
             <h1 class="text-3xl">"About me"</h1>
             <img
