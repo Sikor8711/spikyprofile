@@ -4,7 +4,7 @@ use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
 use crate::posts::hwmonitor::HwmonitorPartOnePost;
 use leptos::prelude::*;
-use leptos_meta::{provide_meta_context, Meta, MetaTags, Stylesheet, Title};
+use leptos_meta::{provide_meta_context, Meta, MetaTags, Script, Stylesheet, Title};
 use leptos_router::components::Outlet;
 use leptos_router::{
     components::{ParentRoute, Route, Router, Routes},
@@ -67,6 +67,17 @@ pub fn App() -> impl IntoView {
         />
         <Meta name="twitter:image" content="https://spikyprofile.dev/assets/images/og-image.png" />
         // sets the document title
+        // Plausible Analytics
+        <Script
+            async_="true"
+            src="https://stats.wildlymagnetic.co/js/pa-kkx4uhVGoobcri1mnbrdL.js"
+        ></Script>
+        <Script>
+            "
+            window.plausible = window.plausible || function () {(plausible.q = plausible.q || []).push(arguments)}, plausible.init = plausible.init || function (i) {plausible.o = i || {}};
+            plausible.init()
+            "
+        </Script>
 
         // content for this welcome page
         <Router>
