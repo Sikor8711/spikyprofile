@@ -114,6 +114,13 @@ pub fn HomePage() -> impl IntoView {
                         "about me"
                     </a>" page — warning, it's quite long."
                 </p>
+                <hr />
+                <p class="text-xl">"Latest Post:"</p>
+                <p>
+                    <a class="alink" href="/blog/post/hardware-monitor-part-1-concept">
+                        "Hardware Monitor Part 1 — Concept"
+                    </a>
+                </p>
             </div>
         </section>
     }

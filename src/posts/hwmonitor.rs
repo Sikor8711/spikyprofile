@@ -143,6 +143,11 @@ pub fn HwmonitorPartOnePost() -> impl IntoView {
                 <p>
                     "If you want to follow along, you'll need Rust installed and a machine with a pulse (CPU temps count)."
                 </p>
+                <p>
+                    <a class="alink" href="https://github.com/Sikor8711/hwm">
+                        hwm Repo github
+                    </a>
+                </p>
                 <hr />
                 <p class="italic text-neutral-500 font-light">
                     "This is the first post in the Hardware Monitor series. I'm building this in public as part of Spiky Rust — learning Rust by building real things, explained from the top down."
