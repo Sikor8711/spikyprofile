@@ -27,44 +27,16 @@ pub fn HomePage() -> impl IntoView {
                         "Spiky Profile <dev>"
                     </h1>
                     <p class="text-xl">
-                        "97th percentile comprehension."<br /> "4th percentile decoding. One brain."
+                        "Rust full-stack · Self-hosted on bare metal · 100/100 Lighthouse on mobile"
                     </p>
                     <p>
-                        "My name is Patryk. I'm a self-taught developer in the middle of a career transition nobody designed a pipeline for. I write about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
+                        "I'm Patryk — a self-taught software engineer building production systems in Rust. This site, the infrastructure it runs on, and the monitoring tools I write about are all mine, top to bottom."
                     </p>
                 </div>
             </div>
             <hr />
             <div class="space-y-5 text-neutral-300">
-                <h2 class="text-2xl">"About this website"</h2>
-                <p>
-                    "This site is the public face of my transition from knitting machine operator to software engineer."
-                </p>
-                <p>
-                    "The name comes from my formal cognitive assessment, which revealed a striking \"spiky profile\" — outstanding silent reading comprehension alongside well-below-average decoding and working memory."
-                </p>
-                <p>
-                    "That contrast shapes how I "<b>"learn"</b>", how I "<b>"teach"</b>
-                    ", and how I "<b>"build"</b>"."
-                </p>
-                <hr />
-                <h2 class="text-2xl">The blog covers:</h2>
-                <ul class="space-y-5 list-disc list-inside">
-                    <li>
-                        <b>"Spiky Rust"</b>
-                        " — a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples."
-                    </li>
-                    <li>
-                        <b>"Self-hosting & infrastructure"</b>
-                        " — Proxmox, Nginx, CI/CD, and the reality of running your own stack."
-                    </li>
-                    <li>
-                        <b>"Career transition"</b>
-                        " — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
-                    </li>
-                </ul>
-                <hr />
-                <h2 class="text-2xl">"Tech Stack"</h2>
+                <h2 class="text-2xl">"What I build with"</h2>
                 <table class="mx-auto">
                     <thead>
                         <tr>
@@ -108,18 +80,40 @@ pub fn HomePage() -> impl IntoView {
                     </tbody>
                 </table>
                 <hr />
+                <h2 class="text-2xl">"Why \"Spiky Profile\""</h2>
+                <p>"97th percentile comprehension. 4th percentile decoding. One brain."</p>
                 <p>
-                    "If you want to find out more about me, I invite you to read the "
-                    <a class="underline" href="/about" aria-label="Link to about me page">
-                        "about me"
-                    </a>" page — warning, it's quite long."
+                    "The name comes from my formal cognitive assessment — outstanding silent reading comprehension alongside well-below-average decoding and working memory. That contrast shapes how I learn, how I teach, and how I build. It's why I chose Rust: the compiler externalises the rules my working memory can't hold."
                 </p>
+                <hr />
+                <h2 class="text-2xl">The blog covers:</h2>
+                <ul class="space-y-5 list-disc list-inside">
+                    <li>
+                        <b>"Spiky Rust"</b>
+                        " — a tutorial series that starts with the end state and works backward, prioritising intuition before formalism. Written for developers who already know how to code and want to understand Rust without wading through toy examples."
+                    </li>
+                    <li>
+                        <b>"Self-hosting & infrastructure"</b>
+                        " — Proxmox, Nginx, CI/CD, and the reality of running your own stack."
+                    </li>
+                    <li>
+                        <b>"Career transition"</b>
+                        " — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
+                    </li>
+                </ul>
                 <hr />
                 <p class="text-xl">"Latest Post:"</p>
                 <p>
                     <a class="alink" href="/blog/post/hardware-monitor-part-1-concept">
                         "Hardware Monitor Part 1 — Concept"
                     </a>
+                </p>
+                <hr />
+                <p>
+                    "If you want the full story — army, café, factory floor, and everything in between — read the "
+                    <a class="underline" href="/about" aria-label="Link to about me page">
+                        "about me"
+                    </a>" page."
                 </p>
             </div>
         </section>
