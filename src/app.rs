@@ -20,6 +20,9 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Patryk Sikorski" />
                 <link rel="canonical" href="https://spikyprofile.dev/" />
+                <AutoReload options=options.clone() />
+                <HydrationScripts options />
+                <MetaTags />
                 <link
                     rel="preload"
                     href="/pkg/sp.css"
@@ -29,9 +32,8 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <noscript>
                     <link rel="stylesheet" href="/pkg/sp.css" />
                 </noscript>
-                <AutoReload options=options.clone() />
-                <HydrationScripts options />
-                <MetaTags />
+                <link rel="preconnect" href="https://stats.wildlymagnetic.co" />
+                <link rel="dns-prefetch" href="https://stats.wildlymagnetic.co" />
             </head>
             <body>
                 <App />
@@ -78,10 +80,11 @@ pub fn App() -> impl IntoView {
         // sets the document title
         // Plausible Analytics
         <Script
+            attr:defer
             async_="true"
             src="https://stats.wildlymagnetic.co/js/pa-kkx4uhVGoobcri1mnbrdL.js"
         ></Script>
-        <Script>
+        <Script attr:defer>
             "
             window.plausible = window.plausible || function () {(plausible.q = plausible.q || []).push(arguments)}, plausible.init = plausible.init || function (i) {plausible.o = i || {}};
             plausible.init()
