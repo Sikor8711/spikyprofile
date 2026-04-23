@@ -51,6 +51,7 @@ pub fn App() -> impl IntoView {
             name="description"
             content="Rust full-stack developer building production systems with Leptos, Axum, and self-hosted bare-metal infrastructure. Blog covering Rust tutorials, self-hosting, and career transition."
         />
+        <Stylesheet id="leptos" href="/pkg/sp.css" />
         <Meta property="og:type" content="website" />
         <Meta
             property="og:title"
