@@ -20,6 +20,15 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta name="author" content="Patryk Sikorski" />
                 <link rel="canonical" href="https://spikyprofile.dev/" />
+                <link
+                    rel="preload"
+                    href="/pkg/sp.css"
+                    attr:as="style"
+                    attr:onload="this.onload=null;this.rel='stylesheet'"
+                />
+                <noscript>
+                    <link rel="stylesheet" href="/pkg/sp.css" />
+                </noscript>
                 <AutoReload options=options.clone() />
                 <HydrationScripts options />
                 <MetaTags />
@@ -40,7 +49,7 @@ pub fn App() -> impl IntoView {
         <Title formatter=|text| format!("Spiky Profile - {text}") />
         <Meta
             name="description"
-            content="A self-taught developer's transition from knitting machine operator to software engineer. Writing about Rust, self-hosted infrastructure, and what 40+ rejections actually look like from the inside."
+            content="Rust full-stack developer building production systems with Leptos, Axum, and self-hosted bare-metal infrastructure. Blog covering Rust tutorials, self-hosting, and career transition."
         />
         <Stylesheet id="leptos" href="/pkg/sp.css" />
         <Meta property="og:type" content="website" />
@@ -50,7 +59,7 @@ pub fn App() -> impl IntoView {
         />
         <Meta
             property="og:description"
-            content="97th percentile comprehension. 4th percentile decoding. One brain. Writing about Rust, self-hosted infrastructure, and the junior dev job search."
+            content="Rust full-stack · Self-hosted on bare metal · 100/100 Lighthouse on mobile. Writing about Rust, self-hosting, and the junior dev job search."
         />
         <Meta property="og:url" content="https://spikyprofile.dev/" />
         <Meta property="og:image" content="https://spikyprofile.dev/assets/images/og-image.png" />

@@ -1,12 +1,8 @@
 # spikyprofile.dev
 
-A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal infrastructure.
+A personal blog and portfolio built with [Leptos](https://leptos.dev/) and [Axum](https://github.com/tokio-rs/axum) — fully server-side rendered, self-hosted on bare-metal Proxmox infrastructure. 100/100 Lighthouse scores across all categories on mobile.
 
 Home of the **Spiky Rust** tutorial series: top-down, context-first Rust teaching for developers who already code.
-
-## About
-
-This site is the public face of my transition from knitting machine operator to software engineer. The name comes from my formal cognitive assessment, which revealed a striking "spiky profile" — outstanding silent reading comprehension alongside well-below-average decoding and working memory. That contrast shapes how I learn, how I teach, and how I build.
 
 The blog covers:
 
