@@ -4,7 +4,7 @@ use crate::pages::blog::BlogPage;
 use crate::pages::home::HomePage;
 use crate::posts::hwmonitor::HwmonitorPartOnePost;
 use leptos::prelude::*;
-use leptos_meta::{provide_meta_context, Meta, MetaTags, Script, Stylesheet, Title};
+use leptos_meta::{provide_meta_context, Meta, MetaTags, Script, Title};
 use leptos_router::components::Outlet;
 use leptos_router::{
     components::{ParentRoute, Route, Router, Routes},
@@ -23,17 +23,7 @@ pub fn shell(options: LeptosOptions) -> impl IntoView {
                 <AutoReload options=options.clone() />
                 <HydrationScripts options />
                 <MetaTags />
-                <link
-                    rel="preload"
-                    href="/pkg/sp.css"
-                    attr:as="style"
-                    attr:onload="this.onload=null;this.rel='stylesheet'"
-                />
-                <noscript>
-                    <link rel="stylesheet" href="/pkg/sp.css" />
-                </noscript>
-                <link rel="preconnect" href="https://stats.wildlymagnetic.co" />
-                <link rel="dns-prefetch" href="https://stats.wildlymagnetic.co" />
+                <link rel="stylesheet" href="/pkg/sp.css" />
             </head>
             <body>
                 <App />
@@ -53,7 +43,6 @@ pub fn App() -> impl IntoView {
             name="description"
             content="Rust full-stack developer building production systems with Leptos, Axum, and self-hosted bare-metal infrastructure. Blog covering Rust tutorials, self-hosting, and career transition."
         />
-        <Stylesheet id="leptos" href="/pkg/sp.css" />
         <Meta property="og:type" content="website" />
         <Meta
             property="og:title"
