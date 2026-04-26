@@ -3,13 +3,25 @@ use leptos_meta::Title;
 
 #[component]
 pub fn HomePage() -> impl IntoView {
+    let show_animated_logo = RwSignal::new(false);
+    Effect::new(move |_| {
+        if cfg!(target_arch = "wasm32") {
+            show_animated_logo.set(true)
+        }
+    });
+
     view! {
         <Title text="Rust, Self-Hosting & Career Transition" />
         <section class="space-y-5">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-2 place-items-center">
-                <Suspense fallback=move || {
-                    view! { <img class="max-h-80 mx-auto" src="images/sp_logo.svg" alt="Logo" /> }
-                }>
+                <Show
+                    when=move || show_animated_logo.get()
+                    fallback=|| {
+                        view! {
+                            <img class="max-h-80 mx-auto" src="images/sp_logo.svg" alt="logo" />
+                        }
+                    }
+                >
                     <svg class="max-h-80 mx-auto" version="1.1" id="svg1" viewBox="0 0 1000 1000">
                         <g
                             id="g3"
@@ -28,7 +40,7 @@ pub fn HomePage() -> impl IntoView {
                             />
                         </g>
                     </svg>
-                </Suspense>
+                </Show>
                 <div class="space-y-5">
                     <h1 class="text-3xl text-center md:text-left font-bold text-shadow-[0_0_20px] ">
                         "Spiky Profile <dev>"
