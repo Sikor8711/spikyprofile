@@ -7,7 +7,12 @@ pub fn HomePage() -> impl IntoView {
         <Title text="Rust, Self-Hosting & Career Transition" />
         <section class="space-y-5">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-2 place-items-center">
-                <svg class="max-h-80 mx-auto" version="1.1" id="svg1" viewBox="0 0 1000 1000">
+                <svg
+                    class="max-h-80 mx-auto order-2 md:order-1"
+                    version="1.1"
+                    id="svg1"
+                    viewBox="0 0 1000 1000"
+                >
                     <g id="g3" transform="matrix(1.5725068,0,0,1.5725068,-152.05252,-263.98656)">
                         <path
                             class="spinning-element"
@@ -22,7 +27,7 @@ pub fn HomePage() -> impl IntoView {
                         />
                     </g>
                 </svg>
-                <div class="space-y-5">
+                <div class="space-y-5 order-1 md:order-2">
                     <h1 class="text-3xl text-center md:text-left font-bold text-shadow-[0_0_20px] ">
                         "Spiky Profile <dev>"
                     </h1>
