@@ -7,7 +7,10 @@ pub fn HomePage() -> impl IntoView {
         <Title text="Rust, Self-Hosting & Career Transition" />
         <section class="space-y-5">
             <div class="grid md:grid-cols-2 grid-cols-1 gap-2 place-items-center">
-                <svg class="max-h-80 mx-auto" viewBox="0 0 320 320">
+                <svg
+                    style="max-height: 320; margin-left: auto; margin-right: auto"
+                    viewBox="0 0 320 320"
+                >
                     <g id="g3" transform="matrix(0.51028295,0,0,0.51028295,-51.592908,-87.915818)">
                         <path
                             class="spinning-element"
