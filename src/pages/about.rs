@@ -147,7 +147,32 @@ pub fn AboutPage() -> impl IntoView {
                 "This site is my untimed exam. No clock. No word limit. No algorithm deciding whether I'm worth a look. Just my work. My thinking. My way of understanding Rust and systems and code and the world. In the open. For anyone who wants to see it."
             </p>
             <p>"If you learn the way I learn, welcome."</p>
-            <p class="pb-10">"You found the right place."</p>
+            <p>"You found the right place."</p>
+
+            <div class="flex justify-between">
+                <p>"Author: Patryk Sikorski"</p>
+                <p>"Posted: 06/04/2026"</p>
+            </div>
+            <hr />
+            <p>"I wrote this while I was still operating the knitting machine, still counting."</p>
+            <p>
+                "The number I stopped at was 110. One hundred and ten rejections. IBM. Counter Terrorism Policing. 1Password. Over a hundred others. Every time another one came in, I told myself the same thing:"
+            </p>
+            <p>"110 — Market. 0 — Patryk. But I only need one score to win the game."</p>
+            <p>"Then I scored."</p>
+            <p>
+                "It wasn't a developer role. It was systems administration — infrastructure, healthcare data pipelines, the whole machine rather than one corner of it. The tanks. The café. The homelab built at night because I needed to own every layer. The filter never saw any of that. The one interview that mattered did."
+            </p>
+            <p>
+                "I'm a Junior Systems Administrator now, at a national medical registry — two months in, and I love it. I still study Computer Science at the University of London at night, and I'm no longer there on \"performance -based admission.\" Just a registered student. I earned the qualifier off."
+            </p>
+            <p>"The filter was wrong one hundred and ten times. It only had to be right once."</p>
+            <p>"The engine finally has wheels that match."</p>
+
+            <div class="flex justify-between">
+                <p>"Author: Patryk Sikorski"</p>
+                <p>"Posted: 25/08/2026"</p>
+            </div>
         </div>
     }
 }

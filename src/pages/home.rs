@@ -33,7 +33,7 @@ pub fn HomePage() -> impl IntoView {
                         "Rust full-stack · Self-hosted on bare metal · 100/100 Lighthouse on mobile"
                     </p>
                     <p>
-                        "I'm Patryk — a self-taught software engineer building production systems in Rust. This site, the infrastructure it runs on, and the monitoring tools I write about are all mine, top to bottom."
+                        "I'm Patryk — a self-taught software engineer building production systems in Rust, and a systems administrator keeping healthcare infrastructure running for a national medical registry. This site, the infrastructure it runs on, and the monitoring tools I write about are all mine, top to bottom."
                     </p>
                 </div>
             </div>
@@ -101,7 +101,7 @@ pub fn HomePage() -> impl IntoView {
                     </li>
                     <li>
                         <b>"Career transition"</b>
-                        " — honest writing about the junior developer job search, 40+ rejections, and what the process actually looks like."
+                        " — honest writing about the junior developer job search, 100+ rejections, the one interview that landed, and the sysadmin role it turned into."
                     </li>
                 </ul>
                 <hr />
