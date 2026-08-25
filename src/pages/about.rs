@@ -164,7 +164,7 @@ pub fn AboutPage() -> impl IntoView {
                 "It wasn't a developer role. It was systems administration — infrastructure, healthcare data pipelines, the whole machine rather than one corner of it. The tanks. The café. The homelab built at night because I needed to own every layer. The filter never saw any of that. The one interview that mattered did."
             </p>
             <p>
-                "I'm a Junior Systems Administrator now, at a national medical registry — two months in, and I love it. I still study Computer Science at the University of London at night, and I'm no longer there on \"performance -based admission.\" Just a registered student. I earned the qualifier off."
+                "I'm a Junior Systems Administrator now, at a national medical registry — two months in, and I love it. I still study Computer Science at the University of London at night, and I'm no longer there on \"performance based admission.\" Just a registered student. I earned the qualifier off."
             </p>
             <p>"The filter was wrong one hundred and ten times. It only had to be right once."</p>
             <p>"The engine finally has wheels that match."</p>
